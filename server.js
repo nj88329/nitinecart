@@ -10,7 +10,7 @@ connectDb();
 const app = express();
 app.use(cors());
 
-
+const PORT = process.env.port || 3000;
 
 
 
@@ -22,8 +22,8 @@ app.use('/api/products', require("./routes/productRoutes") );
 app.use('/api/users', require("./routes/userRoutes") );
 app.use(errorHandler);
 
-app.listen(port , ()=>{
-    console.log(`Server running on port ${process.env.port}`)
+app.listen(PORT , ()=>{
+    console.log(`Server running on port ${PORT}`)
 });
 
 
