@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config();
+require("dotenv").config();
 
 const express = require("express");
 const connectDb = require("./config/dbConnection");
@@ -12,9 +12,7 @@ connectDb();
 const app = express();
 app.use(cors());
 
-const PORT = 3000 || process.env.PORT ;
-
-
+const PORT = 3000 || process.env.PORT;
 
 
 app.use(express.json());
