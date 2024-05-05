@@ -17,6 +17,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// Define a route handler for the root URL
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.use('/api/contacts', require("./routes/contactRoutes") );
 app.use('/api/products', require("./routes/productRoutes") );
 app.use('/api/users', require("./routes/userRoutes") );
