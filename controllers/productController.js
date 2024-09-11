@@ -56,7 +56,6 @@ const updateProduct =  asyncHandler(async(req, res) =>{
        res.status(404);
        throw new Error(" Product not found ");
     } 
-    
       if(product.user_id.toString() !== req.user.id )
       {
          res.status(403);

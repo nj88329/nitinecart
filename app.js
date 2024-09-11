@@ -14,7 +14,6 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
-
 app.use(express.json());
 
 // Define a route handler for the root URL
